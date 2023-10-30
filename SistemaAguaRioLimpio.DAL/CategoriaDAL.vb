@@ -26,28 +26,28 @@ Public Class CategoriaDAL
             End Using
         End Sub
 
-        Public Shadows Sub Update(categoria As CategoriaEntity)
-            'Creamos la conexion a la base de datos'
+    Public Shared Sub Update(categoria As CategoriaEntity)
+        'Creamos la conexion a la base de datos'
 
-            Using conex As New SqlConnection(m_CadenaConexion)
-                conex.Open()
+        Using conex As New SqlConnection(m_CadenaConexion)
+            conex.Open()
 
-                'Creamos la sentencia SQL para agregar un registro'
+            'Creamos la sentencia SQL para agregar un registro'
 
-                Dim sql As String = "UPDATE Categoria Set Nombre = @Nombre" &
+            Dim sql As String = "UPDATE Categoria Set Nombre = @Nombre" &
                                 "WHERE ID =idCategoria"
-                Dim cmd As New SqlCommand(sql, conex)
+            Dim cmd As New SqlCommand(sql, conex)
 
-                'agregamos el parametro'
+            'agregamos el parametro'
 
-                cmd.Parameters.AddWithValue("@Nombre", categoria.Nombre)
-                cmd.Parameters.AddWithValue("@idCategoria", categoria.IdCategoria)
-                cmd.ExecuteNonQuery()
+            cmd.Parameters.AddWithValue("@Nombre", categoria.Nombre)
+            cmd.Parameters.AddWithValue("@idCategoria", categoria.IdCategoria)
+            cmd.ExecuteNonQuery()
 
-            End Using
-        End Sub
+        End Using
+    End Sub
 
-        Public Shared Function Delete(id As Integer) As Boolean
+    Public Shared Function Delete(id As Integer) As Boolean
             Dim SeElimino As Boolean
 
             Using conex As New SqlConnection(m_CadenaConexion)
