@@ -6,7 +6,7 @@ Public Class CategoriaBLL
     Public Shared Sub Save(categoria As CategoriaEntity)
         If categoria.IdCategoria = 0 Then
             'Es una nueva categoria'
-            CategoriaDAL.Create()
+            CategoriaDAL.Create(categoria)
 
         Else
             'Es una actualizacion de una categoria existente '
