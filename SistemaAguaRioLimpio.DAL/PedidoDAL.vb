@@ -26,7 +26,7 @@ Public Class PedidoDAL
                     cmd.Parameters.AddWithValue("@total", pedido.Total)
                     pedido.ID = Convert.ToInt32(cmd.ExecuteScalar())
 
-                    '1. creamoslos detalles de pedido
+                    '1. creamo los detalles de pedido
                     Dim sqlDetallePedido As String = "INSERT INTO DetallePedido(IdPedido, IdArticulo, Cantidad," &
                         "Precio, SubTotal, Descuento, Impuesto, Total) " & "Values(@idPedido, @idArticulo, @cantidad,
                          @precio, @subTotal," & "@descuento, @impuesto, @total)" & "SELECT SCOPE_INDENTITY()"

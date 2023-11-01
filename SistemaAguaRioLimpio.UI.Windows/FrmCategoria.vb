@@ -53,4 +53,8 @@ Public Class frmCategoria
     Private Sub bntCancelar_Click(sender As Object, e As EventArgs) Handles bntCancelar.Click
         Me.Close()
     End Sub
+
+    Private Sub frmCategoria_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class

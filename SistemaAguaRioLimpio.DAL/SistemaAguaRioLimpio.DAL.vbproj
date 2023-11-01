@@ -65,6 +65,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArticuloDAL.vb" />
     <Compile Include="BaseDAL.vb" />
     <Compile Include="CategoriaDAL.vb" />
     <Compile Include="ClienteDAL.vb" />

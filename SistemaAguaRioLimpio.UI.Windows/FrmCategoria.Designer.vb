@@ -31,9 +31,9 @@ Partial Class frmCategoria
         Me.btnGuardar = New System.Windows.Forms.Button()
         Me.bntCancelar = New System.Windows.Forms.Button()
         Me.dgvCategoria = New System.Windows.Forms.DataGridView()
-        Me.ErrorProvider = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ErrorProvider = New System.Windows.Forms.ErrorProvider(Me.components)
         CType(Me.dgvCategoria, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ErrorProvider, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -115,10 +115,6 @@ Partial Class frmCategoria
         Me.dgvCategoria.Size = New System.Drawing.Size(329, 181)
         Me.dgvCategoria.TabIndex = 7
         '
-        'ErrorProvider
-        '
-        Me.ErrorProvider.ContainerControl = Me
-        '
         'ID
         '
         Me.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
@@ -130,6 +126,10 @@ Partial Class frmCategoria
         '
         Me.Nombre.HeaderText = "Nombre"
         Me.Nombre.Name = "Nombre"
+        '
+        'ErrorProvider
+        '
+        Me.ErrorProvider.ContainerControl = Me
         '
         'frmCategoria
         '
