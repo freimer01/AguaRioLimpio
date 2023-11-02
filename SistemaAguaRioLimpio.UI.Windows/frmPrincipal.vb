@@ -1,3 +1,3 @@
-﻿Public Class frmPrincipal
+﻿Public Class FrmPrincipal
 
 End Class

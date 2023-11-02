@@ -54,7 +54,7 @@ Public Class frmCategoria
         Me.Close()
     End Sub
 
-    Private Sub frmCategoria_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub FrmCategoria_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 End Class

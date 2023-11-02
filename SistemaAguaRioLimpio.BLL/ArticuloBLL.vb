@@ -1,8 +1,11 @@
 ﻿
 
+Imports SistemaAguaRioLimpio.DAL
+Imports SistemaAguaRioLimpio.Entities
+
 Public Class ArticuloBLL
 
-    Public Shared Sub Save(articulo As ArticuloEntity)
+    Public Shared Sub Save(articulo As Entities.ArticuloEntity)
         If articulo.ID = 0 Then
             '   Es una nuevo articulo
             ArticuloDAL.Create(articulo)
