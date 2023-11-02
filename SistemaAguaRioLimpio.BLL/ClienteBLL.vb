@@ -3,7 +3,7 @@ Imports SistemaAguaRioLimpio.Entities
 
 Public Class ClienteBLL
     Public Shared Sub Save(cliente As ClienteEntity)
-        If cliente.ID = 0 Then
+        If cliente.IdCliente = 0 Then
             '   Es un nuevo cliente
             ClienteDAL.Create(cliente)
         Else
