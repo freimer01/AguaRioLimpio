@@ -30,13 +30,13 @@ Public Class Login
         lector = comando.ExecuteReader
 
         If lector.HasRows Then
-
-            FrmPrincipal.ShowDialog()
+            MessageBox.Show("Inicio de sesión exitoso.")
+            ' Cierra el formulario de inicio de sesión
+            FrmPrincipal.Show() ' Abre el formulario principal
         Else
-            MessageBox.Show("Este Usuario no existe O Datos Incorrectos")
+            MessageBox.Show("Este Usuario no existe o los datos son incorrectos.")
         End If
         conexion.Close()
-
     End Sub
 
 End Class

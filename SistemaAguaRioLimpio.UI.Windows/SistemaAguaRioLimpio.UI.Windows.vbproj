@@ -110,6 +110,12 @@
     <Compile Include="frmPedido.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmPreguntas.Designer.vb">
+      <DependentUpon>frmPreguntas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPreguntas.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmPrincipal.Designer.vb">
       <DependentUpon>frmPrincipal.vb</DependentUpon>
     </Compile>
@@ -142,6 +148,9 @@
   <ItemGroup>
     <EmbeddedResource Include="frmCategoria.resx">
       <DependentUpon>frmCategoria.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCliente.resx">
+      <DependentUpon>frmCliente.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.vb</DependentUpon>
