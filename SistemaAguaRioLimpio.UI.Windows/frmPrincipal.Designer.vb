@@ -41,6 +41,7 @@ Partial Class FrmPrincipal
         Me.BtnMenuMant = New System.Windows.Forms.Button()
         Me.PanelLogo = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.PanelHijo = New System.Windows.Forms.Panel()
         Me.MenuStrip1.SuspendLayout()
         Me.PanelLateral.SuspendLayout()
         Me.SubMenuAyuda.SuspendLayout()
@@ -117,9 +118,9 @@ Partial Class FrmPrincipal
         Me.SubMenuAyuda.BackColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(36, Byte), Integer))
         Me.SubMenuAyuda.Controls.Add(Me.bt)
         Me.SubMenuAyuda.Dock = System.Windows.Forms.DockStyle.Top
-        Me.SubMenuAyuda.Location = New System.Drawing.Point(0, 357)
+        Me.SubMenuAyuda.Location = New System.Drawing.Point(0, 396)
         Me.SubMenuAyuda.Name = "SubMenuAyuda"
-        Me.SubMenuAyuda.Size = New System.Drawing.Size(250, 175)
+        Me.SubMenuAyuda.Size = New System.Drawing.Size(233, 175)
         Me.SubMenuAyuda.TabIndex = 5
         '
         'bt
@@ -131,7 +132,7 @@ Partial Class FrmPrincipal
         Me.bt.Location = New System.Drawing.Point(0, 0)
         Me.bt.Name = "bt"
         Me.bt.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
-        Me.bt.Size = New System.Drawing.Size(250, 40)
+        Me.bt.Size = New System.Drawing.Size(233, 40)
         Me.bt.TabIndex = 0
         Me.bt.Text = "Preguntas Frecuentes"
         Me.bt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -143,10 +144,10 @@ Partial Class FrmPrincipal
         Me.btnMenuAyuda.FlatAppearance.BorderSize = 0
         Me.btnMenuAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnMenuAyuda.ForeColor = System.Drawing.Color.Gainsboro
-        Me.btnMenuAyuda.Location = New System.Drawing.Point(0, 312)
+        Me.btnMenuAyuda.Location = New System.Drawing.Point(0, 351)
         Me.btnMenuAyuda.Name = "btnMenuAyuda"
         Me.btnMenuAyuda.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
-        Me.btnMenuAyuda.Size = New System.Drawing.Size(250, 45)
+        Me.btnMenuAyuda.Size = New System.Drawing.Size(233, 45)
         Me.btnMenuAyuda.TabIndex = 4
         Me.btnMenuAyuda.Text = "Ayuda"
         Me.btnMenuAyuda.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -162,7 +163,7 @@ Partial Class FrmPrincipal
         Me.SubMenuManten.Dock = System.Windows.Forms.DockStyle.Top
         Me.SubMenuManten.Location = New System.Drawing.Point(0, 145)
         Me.SubMenuManten.Name = "SubMenuManten"
-        Me.SubMenuManten.Size = New System.Drawing.Size(250, 167)
+        Me.SubMenuManten.Size = New System.Drawing.Size(233, 206)
         Me.SubMenuManten.TabIndex = 2
         '
         'Button4
@@ -174,7 +175,7 @@ Partial Class FrmPrincipal
         Me.Button4.Location = New System.Drawing.Point(0, 120)
         Me.Button4.Name = "Button4"
         Me.Button4.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
-        Me.Button4.Size = New System.Drawing.Size(250, 44)
+        Me.Button4.Size = New System.Drawing.Size(233, 41)
         Me.Button4.TabIndex = 3
         Me.Button4.Text = "Producto"
         Me.Button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -189,7 +190,7 @@ Partial Class FrmPrincipal
         Me.Button3.Location = New System.Drawing.Point(0, 80)
         Me.Button3.Name = "Button3"
         Me.Button3.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
-        Me.Button3.Size = New System.Drawing.Size(250, 40)
+        Me.Button3.Size = New System.Drawing.Size(233, 40)
         Me.Button3.TabIndex = 2
         Me.Button3.Text = "Pedido"
         Me.Button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -204,7 +205,7 @@ Partial Class FrmPrincipal
         Me.Button2.Location = New System.Drawing.Point(0, 40)
         Me.Button2.Name = "Button2"
         Me.Button2.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
-        Me.Button2.Size = New System.Drawing.Size(250, 40)
+        Me.Button2.Size = New System.Drawing.Size(233, 40)
         Me.Button2.TabIndex = 1
         Me.Button2.Text = "Empleado"
         Me.Button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -219,7 +220,7 @@ Partial Class FrmPrincipal
         Me.Button1.Location = New System.Drawing.Point(0, 0)
         Me.Button1.Name = "Button1"
         Me.Button1.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
-        Me.Button1.Size = New System.Drawing.Size(250, 40)
+        Me.Button1.Size = New System.Drawing.Size(233, 40)
         Me.Button1.TabIndex = 0
         Me.Button1.Text = "Cliente"
         Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -234,7 +235,7 @@ Partial Class FrmPrincipal
         Me.BtnMenuMant.Location = New System.Drawing.Point(0, 100)
         Me.BtnMenuMant.Name = "BtnMenuMant"
         Me.BtnMenuMant.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
-        Me.BtnMenuMant.Size = New System.Drawing.Size(250, 45)
+        Me.BtnMenuMant.Size = New System.Drawing.Size(233, 45)
         Me.BtnMenuMant.TabIndex = 1
         Me.BtnMenuMant.Text = "Mantenimiento"
         Me.BtnMenuMant.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -246,7 +247,7 @@ Partial Class FrmPrincipal
         Me.PanelLogo.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelLogo.Location = New System.Drawing.Point(0, 0)
         Me.PanelLogo.Name = "PanelLogo"
-        Me.PanelLogo.Size = New System.Drawing.Size(250, 100)
+        Me.PanelLogo.Size = New System.Drawing.Size(233, 100)
         Me.PanelLogo.TabIndex = 0
         '
         'PictureBox1
@@ -257,11 +258,21 @@ Partial Class FrmPrincipal
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
+        'PanelHijo
+        '
+        Me.PanelHijo.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(45, Byte), Integer))
+        Me.PanelHijo.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PanelHijo.Location = New System.Drawing.Point(250, 26)
+        Me.PanelHijo.Name = "PanelHijo"
+        Me.PanelHijo.Size = New System.Drawing.Size(502, 569)
+        Me.PanelHijo.TabIndex = 2
+        '
         'FrmPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(752, 595)
+        Me.Controls.Add(Me.PanelHijo)
         Me.Controls.Add(Me.PanelLateral)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
@@ -299,4 +310,5 @@ Partial Class FrmPrincipal
     Friend WithEvents btnMenuAyuda As Button
     Friend WithEvents SubMenuAyuda As Panel
     Friend WithEvents bt As Button
+    Friend WithEvents PanelHijo As Panel
 End Class
