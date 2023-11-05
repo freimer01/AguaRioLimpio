@@ -1,7 +1,11 @@
-﻿Imports SistemaAguaRioLimpio.BLL
+﻿Imports System.Text.RegularExpressions
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement
+Imports SistemaAguaRioLimpio.BLL
 Imports SistemaAguaRioLimpio.Entities
 
 Public Class frmCategoria
+
+
     Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
         InicialControles()
     End Sub
@@ -39,7 +43,7 @@ Public Class frmCategoria
 
         ErrorProvider.Clear()
 
-        'Verricar que en los campos obligadorios haya datos'
+        'Verificar que en los campos obligadorios haya datos'
 
         If String.IsNullOrEmpty(txtNombre.Text) Then
             ErrorProvider.SetError(txtNombre, "El Nombres es obligatoio")
@@ -55,6 +59,27 @@ Public Class frmCategoria
     End Sub
 
     Private Sub FrmCategoria_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub txtNombre_TextChanged(sender As Object, e As EventArgs) Handles txtNombre.TextChanged
+        ' En el evento TextChanged de un TextBox:
+
+        Dim patronValido As String = "^[a-zA-Z0-9]+$"
+        Dim regex As New Regex(patronValido)
+        Dim textoIngresado As String = txtNombre.Text
+
+        If Not regex.IsMatch(textoIngresado) Then
+            MessageBox.Show("Caracteres no válidos. Solo se permiten letras y números.")
+            ' Puedes borrar el texto no válido o tomar otras medidas según tus requisitos.
+            txtNombre.Text = String.Empty
+        End If
+
+
+
+    End Sub
+
+    Private Sub dgvCategoria_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvCategoria.CellContentClick
 
     End Sub
 End Class

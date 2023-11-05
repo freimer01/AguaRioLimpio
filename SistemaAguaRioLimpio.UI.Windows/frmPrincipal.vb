@@ -27,7 +27,7 @@
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         AbrirFormHijo(New frmCliente)
-        frmCliente.ShowDialog()
+
         hideSubMenu()
 
 
@@ -35,13 +35,13 @@
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         AbrirFormHijo(New frmEmpleado)
-        frmEmpleado.ShowDialog()
+
         hideSubMenu()
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         AbrirFormHijo(New frmPedido)
-        frmPedido.ShowDialog()
+
         hideSubMenu()
     End Sub
 
@@ -60,7 +60,7 @@
 
     Private Sub bt_Click(sender As Object, e As EventArgs) Handles bt.Click
         AbrirFormHijo(New frmPreguntas)
-        frmPreguntas.ShowDialog()
+
         hideSubMenu()
     End Sub
 
@@ -80,7 +80,13 @@
 
     End Sub
 
-    Private Sub MenuStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles MenuStrip1.ItemClicked
+    Private Sub MenuStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs)
 
+    End Sub
+
+    Private Sub btnCategoria_Click(sender As Object, e As EventArgs) Handles btnCategoria.Click
+        AbrirFormHijo(New frmCategoria)
+
+        hideSubMenu()
     End Sub
 End Class

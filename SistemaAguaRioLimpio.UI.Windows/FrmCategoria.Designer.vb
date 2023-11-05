@@ -71,15 +71,16 @@ Partial Class frmCategoria
         Me.txtNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtNombre.Location = New System.Drawing.Point(100, 83)
         Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(215, 26)
+        Me.txtNombre.Size = New System.Drawing.Size(292, 26)
         Me.txtNombre.TabIndex = 3
         '
         'btnNuevo
         '
+        Me.btnNuevo.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnNuevo.Location = New System.Drawing.Point(2, 176)
+        Me.btnNuevo.Location = New System.Drawing.Point(1, 136)
         Me.btnNuevo.Name = "btnNuevo"
-        Me.btnNuevo.Size = New System.Drawing.Size(88, 49)
+        Me.btnNuevo.Size = New System.Drawing.Size(483, 49)
         Me.btnNuevo.TabIndex = 4
         Me.btnNuevo.Text = "Nuevo"
         Me.btnNuevo.UseVisualStyleBackColor = True
@@ -87,9 +88,9 @@ Partial Class frmCategoria
         'btnGuardar
         '
         Me.btnGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnGuardar.Location = New System.Drawing.Point(112, 176)
+        Me.btnGuardar.Location = New System.Drawing.Point(1, 191)
         Me.btnGuardar.Name = "btnGuardar"
-        Me.btnGuardar.Size = New System.Drawing.Size(92, 49)
+        Me.btnGuardar.Size = New System.Drawing.Size(483, 49)
         Me.btnGuardar.TabIndex = 5
         Me.btnGuardar.Text = "Guardar"
         Me.btnGuardar.UseVisualStyleBackColor = True
@@ -97,9 +98,9 @@ Partial Class frmCategoria
         'bntCancelar
         '
         Me.bntCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.bntCancelar.Location = New System.Drawing.Point(223, 176)
+        Me.bntCancelar.Location = New System.Drawing.Point(1, 246)
         Me.bntCancelar.Name = "bntCancelar"
-        Me.bntCancelar.Size = New System.Drawing.Size(92, 49)
+        Me.bntCancelar.Size = New System.Drawing.Size(483, 49)
         Me.bntCancelar.TabIndex = 6
         Me.bntCancelar.Text = "Cancelar"
         Me.bntCancelar.UseVisualStyleBackColor = True
@@ -110,9 +111,9 @@ Partial Class frmCategoria
         Me.dgvCategoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvCategoria.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID, Me.Nombre})
         Me.dgvCategoria.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter
-        Me.dgvCategoria.Location = New System.Drawing.Point(321, 44)
+        Me.dgvCategoria.Location = New System.Drawing.Point(1, 295)
         Me.dgvCategoria.Name = "dgvCategoria"
-        Me.dgvCategoria.Size = New System.Drawing.Size(329, 181)
+        Me.dgvCategoria.Size = New System.Drawing.Size(483, 237)
         Me.dgvCategoria.TabIndex = 7
         '
         'ID
@@ -135,7 +136,7 @@ Partial Class frmCategoria
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(662, 253)
+        Me.ClientSize = New System.Drawing.Size(486, 530)
         Me.Controls.Add(Me.dgvCategoria)
         Me.Controls.Add(Me.bntCancelar)
         Me.Controls.Add(Me.btnGuardar)
