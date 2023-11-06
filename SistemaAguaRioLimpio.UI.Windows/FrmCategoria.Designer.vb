@@ -34,6 +34,8 @@ Partial Class frmCategoria
         Me.ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ErrorProvider = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.btnActualizar = New System.Windows.Forms.Button()
+        Me.btnEliminar = New System.Windows.Forms.Button()
         CType(Me.dgvCategoria, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ErrorProvider, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -77,30 +79,36 @@ Partial Class frmCategoria
         'btnNuevo
         '
         Me.btnNuevo.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnNuevo.Location = New System.Drawing.Point(1, 136)
+        Me.btnNuevo.FlatAppearance.BorderSize = 0
+        Me.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnNuevo.Location = New System.Drawing.Point(214, 148)
         Me.btnNuevo.Name = "btnNuevo"
-        Me.btnNuevo.Size = New System.Drawing.Size(483, 49)
+        Me.btnNuevo.Size = New System.Drawing.Size(75, 49)
         Me.btnNuevo.TabIndex = 4
         Me.btnNuevo.Text = "Nuevo"
         Me.btnNuevo.UseVisualStyleBackColor = True
         '
         'btnGuardar
         '
-        Me.btnGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnGuardar.Location = New System.Drawing.Point(1, 191)
+        Me.btnGuardar.FlatAppearance.BorderSize = 0
+        Me.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnGuardar.Location = New System.Drawing.Point(214, 189)
         Me.btnGuardar.Name = "btnGuardar"
-        Me.btnGuardar.Size = New System.Drawing.Size(483, 49)
+        Me.btnGuardar.Size = New System.Drawing.Size(75, 35)
         Me.btnGuardar.TabIndex = 5
         Me.btnGuardar.Text = "Guardar"
         Me.btnGuardar.UseVisualStyleBackColor = True
         '
         'bntCancelar
         '
-        Me.bntCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.bntCancelar.Location = New System.Drawing.Point(1, 246)
+        Me.bntCancelar.FlatAppearance.BorderSize = 0
+        Me.bntCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.bntCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.bntCancelar.Location = New System.Drawing.Point(199, 289)
         Me.bntCancelar.Name = "bntCancelar"
-        Me.bntCancelar.Size = New System.Drawing.Size(483, 49)
+        Me.bntCancelar.Size = New System.Drawing.Size(101, 49)
         Me.bntCancelar.TabIndex = 6
         Me.bntCancelar.Text = "Cancelar"
         Me.bntCancelar.UseVisualStyleBackColor = True
@@ -111,9 +119,9 @@ Partial Class frmCategoria
         Me.dgvCategoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvCategoria.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID, Me.Nombre})
         Me.dgvCategoria.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter
-        Me.dgvCategoria.Location = New System.Drawing.Point(1, 295)
+        Me.dgvCategoria.Location = New System.Drawing.Point(0, 335)
         Me.dgvCategoria.Name = "dgvCategoria"
-        Me.dgvCategoria.Size = New System.Drawing.Size(483, 237)
+        Me.dgvCategoria.Size = New System.Drawing.Size(485, 195)
         Me.dgvCategoria.TabIndex = 7
         '
         'ID
@@ -132,11 +140,37 @@ Partial Class frmCategoria
         '
         Me.ErrorProvider.ContainerControl = Me
         '
+        'btnActualizar
+        '
+        Me.btnActualizar.FlatAppearance.BorderSize = 0
+        Me.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnActualizar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnActualizar.Location = New System.Drawing.Point(199, 219)
+        Me.btnActualizar.Name = "btnActualizar"
+        Me.btnActualizar.Size = New System.Drawing.Size(101, 49)
+        Me.btnActualizar.TabIndex = 8
+        Me.btnActualizar.Text = "Actualizar"
+        Me.btnActualizar.UseVisualStyleBackColor = True
+        '
+        'btnEliminar
+        '
+        Me.btnEliminar.FlatAppearance.BorderSize = 0
+        Me.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnEliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEliminar.Location = New System.Drawing.Point(199, 253)
+        Me.btnEliminar.Name = "btnEliminar"
+        Me.btnEliminar.Size = New System.Drawing.Size(101, 49)
+        Me.btnEliminar.TabIndex = 9
+        Me.btnEliminar.Text = "Eliminar"
+        Me.btnEliminar.UseVisualStyleBackColor = True
+        '
         'frmCategoria
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(486, 530)
+        Me.Controls.Add(Me.btnEliminar)
+        Me.Controls.Add(Me.btnActualizar)
         Me.Controls.Add(Me.dgvCategoria)
         Me.Controls.Add(Me.bntCancelar)
         Me.Controls.Add(Me.btnGuardar)
@@ -165,4 +199,6 @@ Partial Class frmCategoria
     Friend WithEvents ErrorProvider As ErrorProvider
     Friend WithEvents ID As DataGridViewTextBoxColumn
     Friend WithEvents Nombre As DataGridViewTextBoxColumn
+    Friend WithEvents btnEliminar As Button
+    Friend WithEvents btnActualizar As Button
 End Class

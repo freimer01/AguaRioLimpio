@@ -82,4 +82,8 @@ Public Class frmCategoria
     Private Sub dgvCategoria_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvCategoria.CellContentClick
 
     End Sub
+
+    Private Sub btnActualizar_Click(sender As Object, e As EventArgs) Handles btnActualizar.Click
+
+    End Sub
 End Class

@@ -1,7 +1,10 @@
 ﻿Imports System.Data
 Imports System.Data.SqlClient
+Imports System.Text.RegularExpressions
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 
 Public Class Login
+
     Dim conexion As New SqlConnection
     Dim comando As New SqlCommand
 
@@ -45,4 +48,20 @@ Public Class Login
         conexion.Close()
     End Sub
 
+    Private Sub txtUsuario_TextChanged(sender As Object, e As EventArgs) Handles txtUsuario.TextChanged
+        ' En el evento TextChanged de un TextBox:
+
+        Dim patronValido As String = "^[a-zA-Z0-9_]+$"
+        Dim regex As New Regex(patronValido)
+        Dim textoIngresado As String = txtUsuario.Text
+
+        ' Verifica si el TextBox no está vacío antes de aplicar la validación
+        If Not String.IsNullOrEmpty(textoIngresado) AndAlso Not regex.IsMatch(textoIngresado) Then
+            MessageBox.Show("Caracteres no válidos. Solo se permiten letras, números y guiones bajos (_).")
+            ' Puedes borrar el texto no válido o tomar otras medidas según tus requisitos.
+            txtUsuario.Text = String.Empty
+
+        End If
+
+    End Sub
 End Class

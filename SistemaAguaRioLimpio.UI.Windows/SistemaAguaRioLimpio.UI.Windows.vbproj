@@ -73,6 +73,11 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AguaRioLimpioDBDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AguaRioLimpioDBDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ApplicationEvents.vb" />
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
@@ -179,6 +184,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="AguaRioLimpioDBDataSet.xsc">
+      <DependentUpon>AguaRioLimpioDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AguaRioLimpioDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AguaRioLimpioDBDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AguaRioLimpioDBDataSet.xss">
+      <DependentUpon>AguaRioLimpioDBDataSet.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -194,6 +210,10 @@
     <ProjectReference Include="..\SistemaAguaRioLimpio.BLL\SistemaAguaRioLimpio.BLL.vbproj">
       <Project>{5a0537db-5cbb-41c3-ab17-01788f33db4d}</Project>
       <Name>SistemaAguaRioLimpio.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SistemaAguaRioLimpio.DAL\SistemaAguaRioLimpio.DAL.vbproj">
+      <Project>{e6b25d7e-43d3-4591-a279-9ea8844b700a}</Project>
+      <Name>SistemaAguaRioLimpio.DAL</Name>
     </ProjectReference>
     <ProjectReference Include="..\SistemaAguaRioLimpio.Entities\SistemaAguaRioLimpio.Entities.vbproj">
       <Project>{6db18cc5-1c9a-4e98-9bda-08a61ad6f6c8}</Project>
