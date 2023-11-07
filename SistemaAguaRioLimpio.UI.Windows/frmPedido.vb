@@ -22,12 +22,28 @@ Public Class frmPedido
     End Property
 
 
-    Private Sub frmPedido_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub btnAgregarProducto_Click(sender As Object, e As EventArgs) Handles btnAgregarProducto.Click
 
-    End Sub
+        'Validacion de que el detalle no sea incorrecto
+        If Not ValidarDetalle() Then
+            Exit Sub
+        End If
 
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
-        Me.Close()
+        Dim Detalle As New DetallePedidoEntity
+
+        Detalle.ID = Me.txtCodigoProducto.Text
+        Detalle.IdPedido = Me.txtCodigoProducto.Text
+        Detalle.IdProducto = txtCodigoProducto.Text
+        Detalle.Cantidad = Me.txtCantidadProducto.Text
+        Detalle.Precio = Me.txtPrecioProducto.Text
+        Detalle.Descuento = Me.txtDescuentoProducto.Text
+
+        'Agrega el objeto detalle a la lista
+        iPedido.Detalles.Add(Detalle)
+
+        'inicializamos todo despues de agregar el pedido
+        InicializarControlesDetalle()
+
     End Sub
 
     Private Sub btnBuscarCliente_Click(sender As Object, e As EventArgs) Handles btnBuscarCliente.Click
@@ -60,29 +76,67 @@ Public Class frmPedido
 
         End If
     End Sub
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+        Me.Close()
+    End Sub
 
-    Private Sub btnAgregarProducto_Click(sender As Object, e As EventArgs) Handles btnAgregarProducto.Click
-
-        'Validacion de que el detalle no sea incorrecto
-        If Not ValidarDetalle() Then
+    Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
+        'para cerrar el formulario
+        Me.Close()
+    End Sub
+    Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
+        'validamos que nada este vacio antes de guardar
+        If Not ValidarPedido() Then
             Exit Sub
         End If
 
-        Dim Detalle As New DetallePedidoEntity
+        'pasamos sus respectivos valores para ser guardados
+        iPedido.ID = 0
+        iPedido.IdCliente = Me.txtCodigoCliente.Text
+        iPedido.Fecha = Me.DateTimePicker.Value
 
-        Detalle.ID = Me.txtCodigoProducto.Text
-        Detalle.IdPedido = Me.txtCodigoProducto.Text
-        Detalle.IdProducto = txtCodigoProducto.Text
-        Detalle.Cantidad = Me.txtCantidadProducto.Text
-        Detalle.Precio = Me.txtPrecioProducto.Text
-        Detalle.Descuento = Me.txtDescuentoProducto.Text
+        iDetallePedido.IdProducto = _IdProductoo
 
-        'Agrega el objeto detalle a la lista
-        iPedido.Detalles.Add(Detalle)
+        Try
+            'guardamos y mostramos mensaje de confirmacion
+            PedidoBLL.Save(iPedido)
+            MessageBox.Show("Pedido generado correctamente...", Nombre_Empresa, MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Inicializar()
+        Catch ex As Exception
+            'en caso de error mostramos esto
+            MessageBox.Show(ex.Message, Nombre_Empresa, MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
 
-        'inicializamos todo despues de agregar el pedido
+    End Sub
+
+    Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
+        'reinicia los textbox para un nuevo pedido
+        Inicializar()
+    End Sub
+
+    Private Sub frmPedido_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Inicializar()
+    End Sub
+    Private Sub Inicializar()
+
+        iPedido = New PedidoEntity
+        iDetallePedido = New DetallePedidoEntity
+
+        Me.txtCodigoCliente.Text = 0
+        Me.txtNombre.Clear()
+        Me.txtCedula.Clear()
+        Me.txtMesa.Text = 0
+        Me.DateTimePicker.Value = DateTime.Today
+        Me.txtProducto.Text = ""
+        Me.txtSubTotal.Text = 0.ToString("C")
+        Me.txtDescuentoTotal.Text = 0.ToString("C")
+        Me.txtImpuestoTotal.Text = 0.ToString("C")
+        Me.txtTotalFinal.Text = 0.ToString("C")
+
+        Me.dgvPedido.AutoGenerateColumns = False
+        Me.dgvPedido.DataSource = Nothing
+
         InicializarControlesDetalle()
-
     End Sub
 
     Private Sub InicializarControlesDetalle()
@@ -149,65 +203,6 @@ Public Class frmPedido
         End If
         Return Resultado
     End Function
-
-    Private Sub Inicializar()
-
-        iPedido = New PedidoEntity
-        iDetallePedido = New DetallePedidoEntity
-
-        Me.txtCodigoCliente.Text = 0
-        Me.txtNombre.Clear()
-        Me.txtCedula.Clear()
-        Me.txtMesa.Text = 0
-        Me.DateTimePicker.Value = DateTime.Today
-        Me.txtProducto.Text = ""
-        Me.txtSubTotal.Text = 0.ToString("C")
-        Me.txtDescuentoTotal.Text = 0.ToString("C")
-        Me.txtImpuestoTotal.Text = 0.ToString("C")
-        Me.txtTotalFinal.Text = 0.ToString("C")
-
-        Me.dgvPedido.AutoGenerateColumns = False
-        Me.dgvPedido.DataSource = Nothing
-
-        InicializarControlesDetalle()
-    End Sub
-
-
-
-    Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
-        'validamos que nada este vacio antes de guardar
-        If Not ValidarPedido() Then
-            Exit Sub
-        End If
-
-        'pasamos sus respectivos valores para ser guardados
-        iPedido.ID = 0
-        iPedido.IdCliente = Me.txtCodigoCliente.Text
-        iPedido.Fecha = Me.DateTimePicker.Value
-
-        iDetallePedido.IdProducto = _IdProductoo
-
-        Try
-            'guardamos y mostramos mensaje de confirmacion
-            PedidoBLL.Save(iPedido)
-            MessageBox.Show("Pedido generado correctamente...", Nombre_Empresa, MessageBoxButtons.OK, MessageBoxIcon.Information)
-            Inicializar()
-        Catch ex As Exception
-            'en caso de error mostramos esto
-            MessageBox.Show(ex.Message, Nombre_Empresa, MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End Try
-
-    End Sub
-
-    Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
-        'reinicia los textbox para un nuevo pedido
-        Inicializar()
-    End Sub
-
-    Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
-        'para cerrar el formulario
-        Me.Close()
-    End Sub
 
     Private Sub dgvPedido_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvPedido.CellClick
 
