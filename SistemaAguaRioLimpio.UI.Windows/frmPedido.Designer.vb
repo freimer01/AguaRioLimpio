@@ -365,7 +365,7 @@ Partial Class frmPedido
         Me.btnGuardar.ForeColor = System.Drawing.Color.Black
         Me.btnGuardar.Location = New System.Drawing.Point(232, 301)
         Me.btnGuardar.Name = "btnGuardar"
-        Me.btnGuardar.Size = New System.Drawing.Size(106, 52)
+        Me.btnGuardar.Size = New System.Drawing.Size(113, 52)
         Me.btnGuardar.TabIndex = 9
         Me.btnGuardar.Text = "Registrar venta"
         Me.btnGuardar.UseVisualStyleBackColor = True

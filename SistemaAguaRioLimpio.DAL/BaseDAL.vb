@@ -1,5 +1,4 @@
 ﻿Public MustInherit Class BaseDAL
 
-    Protected Shared m_CadenaConexion As String = "Data Sourse =DESKTOP-G4KT730\SQL2022; Initial Catalog =AguaRioLimpioDB; Integrated Security = true"
-
+    Protected Shared m_CadenaConexion As String = "Data Source=local;Initial Catalog=AguaRioLimpioDB;Integrated Security=True"
 End Class

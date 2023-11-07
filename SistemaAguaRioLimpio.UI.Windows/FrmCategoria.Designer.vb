@@ -82,7 +82,7 @@ Partial Class frmCategoria
         Me.btnNuevo.FlatAppearance.BorderSize = 0
         Me.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnNuevo.Location = New System.Drawing.Point(214, 148)
+        Me.btnNuevo.Location = New System.Drawing.Point(37, 189)
         Me.btnNuevo.Name = "btnNuevo"
         Me.btnNuevo.Size = New System.Drawing.Size(75, 49)
         Me.btnNuevo.TabIndex = 4
@@ -94,7 +94,7 @@ Partial Class frmCategoria
         Me.btnGuardar.FlatAppearance.BorderSize = 0
         Me.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnGuardar.Location = New System.Drawing.Point(214, 189)
+        Me.btnGuardar.Location = New System.Drawing.Point(118, 196)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(75, 35)
         Me.btnGuardar.TabIndex = 5
@@ -106,7 +106,7 @@ Partial Class frmCategoria
         Me.bntCancelar.FlatAppearance.BorderSize = 0
         Me.bntCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.bntCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.bntCancelar.Location = New System.Drawing.Point(199, 289)
+        Me.bntCancelar.Location = New System.Drawing.Point(374, 189)
         Me.bntCancelar.Name = "bntCancelar"
         Me.bntCancelar.Size = New System.Drawing.Size(101, 49)
         Me.bntCancelar.TabIndex = 6
@@ -119,9 +119,9 @@ Partial Class frmCategoria
         Me.dgvCategoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvCategoria.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID, Me.Nombre})
         Me.dgvCategoria.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter
-        Me.dgvCategoria.Location = New System.Drawing.Point(0, 335)
+        Me.dgvCategoria.Location = New System.Drawing.Point(481, 12)
         Me.dgvCategoria.Name = "dgvCategoria"
-        Me.dgvCategoria.Size = New System.Drawing.Size(485, 195)
+        Me.dgvCategoria.Size = New System.Drawing.Size(362, 212)
         Me.dgvCategoria.TabIndex = 7
         '
         'ID
@@ -145,7 +145,7 @@ Partial Class frmCategoria
         Me.btnActualizar.FlatAppearance.BorderSize = 0
         Me.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnActualizar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnActualizar.Location = New System.Drawing.Point(199, 219)
+        Me.btnActualizar.Location = New System.Drawing.Point(199, 189)
         Me.btnActualizar.Name = "btnActualizar"
         Me.btnActualizar.Size = New System.Drawing.Size(101, 49)
         Me.btnActualizar.TabIndex = 8
@@ -157,7 +157,7 @@ Partial Class frmCategoria
         Me.btnEliminar.FlatAppearance.BorderSize = 0
         Me.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnEliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnEliminar.Location = New System.Drawing.Point(199, 253)
+        Me.btnEliminar.Location = New System.Drawing.Point(291, 189)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(101, 49)
         Me.btnEliminar.TabIndex = 9
@@ -168,7 +168,7 @@ Partial Class frmCategoria
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(486, 530)
+        Me.ClientSize = New System.Drawing.Size(855, 530)
         Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.btnActualizar)
         Me.Controls.Add(Me.dgvCategoria)

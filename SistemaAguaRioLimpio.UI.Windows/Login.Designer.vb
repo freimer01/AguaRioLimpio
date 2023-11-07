@@ -36,7 +36,7 @@ Partial Class Login
         'txtUsuario
         '
         Me.txtUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtUsuario.Location = New System.Drawing.Point(113, 137)
+        Me.txtUsuario.Location = New System.Drawing.Point(122, 137)
         Me.txtUsuario.Name = "txtUsuario"
         Me.txtUsuario.Size = New System.Drawing.Size(177, 26)
         Me.txtUsuario.TabIndex = 0
@@ -45,7 +45,7 @@ Partial Class Login
         'txtContraseña
         '
         Me.txtContraseña.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtContraseña.Location = New System.Drawing.Point(113, 196)
+        Me.txtContraseña.Location = New System.Drawing.Point(122, 198)
         Me.txtContraseña.Name = "txtContraseña"
         Me.txtContraseña.Size = New System.Drawing.Size(177, 26)
         Me.txtContraseña.TabIndex = 1

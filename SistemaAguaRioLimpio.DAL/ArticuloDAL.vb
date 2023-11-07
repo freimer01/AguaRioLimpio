@@ -95,10 +95,7 @@ Public Class ArticuloDAL
             Conex.Open()
 
             'CREAMOS LA SENTENCIA SQL PARA AGREGAR UN REGISTRO
-            Dim sql As String = "UPDATE Articulo Set IdCategoria=@idCategoria,
-                                                     Nombre=@nombre,
-                                                     Descripcion=@descripcion,
-                                                     PrecioCompra=@precioCompra,
+            Dim sql As String = "UPDATE Articulo Set IdCategoria=@idCategoria,Nombre=@nombre,Descripcion=@descripcion,PrecioCompra=@precioCompra,
                                                      PrecioVenta=@precioVenta,
                                                      Stock=@stock WHERE ID=idArticulo"
 

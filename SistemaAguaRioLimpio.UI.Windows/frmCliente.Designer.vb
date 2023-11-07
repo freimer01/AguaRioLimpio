@@ -26,6 +26,15 @@ Partial Class frmCliente
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmCliente))
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.IDClienteDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ApellidosDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CedulaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DireccionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TelefonoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FechaRegistroDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ClienteBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.AguaRioLimpioDBDataSet = New SistemaAguaRioLimpio.UI.Windows.AguaRioLimpioDBDataSet()
         Me.txtID = New System.Windows.Forms.TextBox()
         Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.txtApellido = New System.Windows.Forms.TextBox()
@@ -38,20 +47,11 @@ Partial Class frmCliente
         Me.btnEliminar = New System.Windows.Forms.Button()
         Me.btnLimpiar = New System.Windows.Forms.Button()
         Me.txtFecha = New System.Windows.Forms.TextBox()
-        Me.AguaRioLimpioDBDataSet = New SistemaAguaRioLimpio.UI.Windows.AguaRioLimpioDBDataSet()
-        Me.ClienteBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ClienteTableAdapter = New SistemaAguaRioLimpio.UI.Windows.AguaRioLimpioDBDataSetTableAdapters.ClienteTableAdapter()
-        Me.IDClienteDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ApellidosDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CedulaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DireccionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TelefonoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FechaRegistroDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.AguaRioLimpioDBDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClienteBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.AguaRioLimpioDBDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PictureBox1
@@ -76,6 +76,59 @@ Partial Class frmCliente
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(503, 270)
         Me.DataGridView1.TabIndex = 2
+        '
+        'IDClienteDataGridViewTextBoxColumn
+        '
+        Me.IDClienteDataGridViewTextBoxColumn.DataPropertyName = "IDCliente"
+        Me.IDClienteDataGridViewTextBoxColumn.HeaderText = "IDCliente"
+        Me.IDClienteDataGridViewTextBoxColumn.Name = "IDClienteDataGridViewTextBoxColumn"
+        Me.IDClienteDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'NombreDataGridViewTextBoxColumn
+        '
+        Me.NombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre"
+        Me.NombreDataGridViewTextBoxColumn.HeaderText = "Nombre"
+        Me.NombreDataGridViewTextBoxColumn.Name = "NombreDataGridViewTextBoxColumn"
+        '
+        'ApellidosDataGridViewTextBoxColumn
+        '
+        Me.ApellidosDataGridViewTextBoxColumn.DataPropertyName = "Apellidos"
+        Me.ApellidosDataGridViewTextBoxColumn.HeaderText = "Apellidos"
+        Me.ApellidosDataGridViewTextBoxColumn.Name = "ApellidosDataGridViewTextBoxColumn"
+        '
+        'CedulaDataGridViewTextBoxColumn
+        '
+        Me.CedulaDataGridViewTextBoxColumn.DataPropertyName = "Cedula"
+        Me.CedulaDataGridViewTextBoxColumn.HeaderText = "Cedula"
+        Me.CedulaDataGridViewTextBoxColumn.Name = "CedulaDataGridViewTextBoxColumn"
+        '
+        'DireccionDataGridViewTextBoxColumn
+        '
+        Me.DireccionDataGridViewTextBoxColumn.DataPropertyName = "Direccion"
+        Me.DireccionDataGridViewTextBoxColumn.HeaderText = "Direccion"
+        Me.DireccionDataGridViewTextBoxColumn.Name = "DireccionDataGridViewTextBoxColumn"
+        '
+        'TelefonoDataGridViewTextBoxColumn
+        '
+        Me.TelefonoDataGridViewTextBoxColumn.DataPropertyName = "Telefono"
+        Me.TelefonoDataGridViewTextBoxColumn.HeaderText = "Telefono"
+        Me.TelefonoDataGridViewTextBoxColumn.Name = "TelefonoDataGridViewTextBoxColumn"
+        '
+        'FechaRegistroDataGridViewTextBoxColumn
+        '
+        Me.FechaRegistroDataGridViewTextBoxColumn.DataPropertyName = "FechaRegistro"
+        Me.FechaRegistroDataGridViewTextBoxColumn.HeaderText = "FechaRegistro"
+        Me.FechaRegistroDataGridViewTextBoxColumn.Name = "FechaRegistroDataGridViewTextBoxColumn"
+        '
+        'ClienteBindingSource
+        '
+        Me.ClienteBindingSource.DataMember = "Cliente"
+        Me.ClienteBindingSource.DataSource = Me.AguaRioLimpioDBDataSet
+        '
+        'AguaRioLimpioDBDataSet
+        '
+        Me.AguaRioLimpioDBDataSet.DataSetName = "AguaRioLimpioDBDataSet"
+        Me.AguaRioLimpioDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'txtID
         '
@@ -171,69 +224,16 @@ Partial Class frmCliente
         Me.txtFecha.Size = New System.Drawing.Size(150, 20)
         Me.txtFecha.TabIndex = 14
         '
-        'AguaRioLimpioDBDataSet
-        '
-        Me.AguaRioLimpioDBDataSet.DataSetName = "AguaRioLimpioDBDataSet"
-        Me.AguaRioLimpioDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'ClienteBindingSource
-        '
-        Me.ClienteBindingSource.DataMember = "Cliente"
-        Me.ClienteBindingSource.DataSource = Me.AguaRioLimpioDBDataSet
-        '
         'ClienteTableAdapter
         '
         Me.ClienteTableAdapter.ClearBeforeFill = True
-        '
-        'IDClienteDataGridViewTextBoxColumn
-        '
-        Me.IDClienteDataGridViewTextBoxColumn.DataPropertyName = "IDCliente"
-        Me.IDClienteDataGridViewTextBoxColumn.HeaderText = "IDCliente"
-        Me.IDClienteDataGridViewTextBoxColumn.Name = "IDClienteDataGridViewTextBoxColumn"
-        Me.IDClienteDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'NombreDataGridViewTextBoxColumn
-        '
-        Me.NombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre"
-        Me.NombreDataGridViewTextBoxColumn.HeaderText = "Nombre"
-        Me.NombreDataGridViewTextBoxColumn.Name = "NombreDataGridViewTextBoxColumn"
-        '
-        'ApellidosDataGridViewTextBoxColumn
-        '
-        Me.ApellidosDataGridViewTextBoxColumn.DataPropertyName = "Apellidos"
-        Me.ApellidosDataGridViewTextBoxColumn.HeaderText = "Apellidos"
-        Me.ApellidosDataGridViewTextBoxColumn.Name = "ApellidosDataGridViewTextBoxColumn"
-        '
-        'CedulaDataGridViewTextBoxColumn
-        '
-        Me.CedulaDataGridViewTextBoxColumn.DataPropertyName = "Cedula"
-        Me.CedulaDataGridViewTextBoxColumn.HeaderText = "Cedula"
-        Me.CedulaDataGridViewTextBoxColumn.Name = "CedulaDataGridViewTextBoxColumn"
-        '
-        'DireccionDataGridViewTextBoxColumn
-        '
-        Me.DireccionDataGridViewTextBoxColumn.DataPropertyName = "Direccion"
-        Me.DireccionDataGridViewTextBoxColumn.HeaderText = "Direccion"
-        Me.DireccionDataGridViewTextBoxColumn.Name = "DireccionDataGridViewTextBoxColumn"
-        '
-        'TelefonoDataGridViewTextBoxColumn
-        '
-        Me.TelefonoDataGridViewTextBoxColumn.DataPropertyName = "Telefono"
-        Me.TelefonoDataGridViewTextBoxColumn.HeaderText = "Telefono"
-        Me.TelefonoDataGridViewTextBoxColumn.Name = "TelefonoDataGridViewTextBoxColumn"
-        '
-        'FechaRegistroDataGridViewTextBoxColumn
-        '
-        Me.FechaRegistroDataGridViewTextBoxColumn.DataPropertyName = "FechaRegistro"
-        Me.FechaRegistroDataGridViewTextBoxColumn.HeaderText = "FechaRegistro"
-        Me.FechaRegistroDataGridViewTextBoxColumn.Name = "FechaRegistroDataGridViewTextBoxColumn"
         '
         'frmCliente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(45, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(502, 569)
+        Me.ClientSize = New System.Drawing.Size(573, 569)
         Me.Controls.Add(Me.txtFecha)
         Me.Controls.Add(Me.btnLimpiar)
         Me.Controls.Add(Me.btnEliminar)
@@ -253,8 +253,8 @@ Partial Class frmCliente
         Me.Text = "frmCliente"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.AguaRioLimpioDBDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ClienteBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.AguaRioLimpioDBDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
