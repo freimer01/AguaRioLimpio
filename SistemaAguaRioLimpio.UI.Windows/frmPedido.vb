@@ -108,7 +108,7 @@ Public Class frmPedido
         ErrorProvider.Clear()
 
         If txtCodigoProducto.Text = 0 Then
-            MessageBox.Show("Por favor agregue los productos...", Nombre_Sistema, MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show("Por favor agregue los productos...", Nombre_Empresa, MessageBoxButtons.OK, MessageBoxIcon.Information)
             Me.btnBuscarProducto.Focus()
             Resultado = False
         End If
@@ -143,7 +143,7 @@ Public Class frmPedido
         Dim Resultado As Boolean = True
         ErrorProvider.Clear()
         If IdProductoo = 0 Then
-            MessageBox.Show("Por favor seleccione el articulo...", Nombre_Sistema, MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show("Por favor seleccione el articulo...", Nombre_Empresa, MessageBoxButtons.OK, MessageBoxIcon.Information)
             Me.dgvPedido.Focus()
             Resultado = False
         End If
@@ -190,11 +190,11 @@ Public Class frmPedido
         Try
             'guardamos y mostramos mensaje de confirmacion
             PedidoBLL.Save(iPedido)
-            MessageBox.Show("Pedido generado correctamente...", Nombre_Sistema, MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show("Pedido generado correctamente...", Nombre_Empresa, MessageBoxButtons.OK, MessageBoxIcon.Information)
             Inicializar()
         Catch ex As Exception
             'en caso de error mostramos esto
-            MessageBox.Show(ex.Message, Nombre_Sistema, MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show(ex.Message, Nombre_Empresa, MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
 
     End Sub
