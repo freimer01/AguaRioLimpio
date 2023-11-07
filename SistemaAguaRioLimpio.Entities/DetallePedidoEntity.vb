@@ -2,8 +2,8 @@
 
     Public Property ID() As Integer
     Public Property IdPedido() As Integer
-    Public Property IdArticulo() As Integer
-    Public Property NombreArticulo() As String
+    Public Property IdProducto() As Integer
+    Public Property NombreProducto() As String
     Public Property Cantidad() As Decimal
     Public Property Precio() As Decimal
     Public Property Descuento() As Decimal
