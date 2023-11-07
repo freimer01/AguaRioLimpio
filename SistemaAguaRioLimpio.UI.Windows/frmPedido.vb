@@ -3,7 +3,7 @@ Imports SistemaAguaRioLimpio.Entities
 
 Public Class frmPedido
 
-    'Variable que recoge el id del articulo seleccionado
+    'Variable que recoge el id del producto seleccionado
     Private _IdProductoo As Integer
 
     'Detalle de la lista del pedido

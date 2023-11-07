@@ -1,3 +1,3 @@
 ﻿Module NombreEmpresa
-    Public Nombre_Empresa As String = "Sistema de Ventas Cafeteria"
+    Public Nombre_Empresa As String = "Sistema Agua Rio Limpio"
 End Module
