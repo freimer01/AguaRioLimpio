@@ -5,7 +5,7 @@ Imports SistemaAguaRioLimpio.Entities
 Public Class ProductoBLL
 
     Public Shared Sub Save(prododucto As Entities.ProductoEntity)
-        If prododucto.ID = 0 Then
+        If prododucto.IdProduto = 0 Then
             '   Es una nuevo articulo
             ProductoDAL.Create(prododucto)
         Else

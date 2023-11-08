@@ -116,8 +116,8 @@ Public Class ProductoDAL
             cmd.Parameters.AddWithValue("@Descripcion", producto.Descripcion)
             cmd.Parameters.AddWithValue("@Precio", producto.Precio)
             cmd.Parameters.AddWithValue("@StockProducto", producto.StockProducto)
-            cmd.Parameters.AddWithValue("@ID", producto.ID)
-            cmd.Parameters.AddWithValue("@IdCategoria", producto.ID)
+            cmd.Parameters.AddWithValue("@ID", producto.IdProduto)
+            cmd.Parameters.AddWithValue("@IdCategoria", producto.IdProduto)
 
             cmd.ExecuteNonQuery()  'Ejecutar Comando
 
@@ -130,9 +130,9 @@ Public Class ProductoDAL
         Using conex As New SqlConnection(m_CadenaDeconexion)
             conex.Open()
 
-            Dim sql As String = "DELETE FROM Producto WHERE ID=@ID"
+            Dim sql As String = "DELETE FROM Producto WHERE ID=@IdProducto"
             Dim cmd As New SqlCommand(sql, conex)
-            cmd.Parameters.AddWithValue("ID", Id)
+            cmd.Parameters.AddWithValue("IdProducto", Id)
 
             SeElimino = cmd.ExecuteNonQuery() > 0
 
