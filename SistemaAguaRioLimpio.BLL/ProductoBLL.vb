@@ -6,10 +6,10 @@ Public Class ProductoBLL
 
     Public Shared Sub Save(prododucto As Entities.ProductoEntity)
         If prododucto.IdProduto = 0 Then
-            '   Es una nuevo articulo
+            '   Es una nuevo producto
             ProductoDAL.Create(prododucto)
         Else
-            '    Es una actualizacion de un nuevo articulo existente
+            '    Es una actualizacion de un nuevo productos existente
             ProductoDAL.Update(prododucto)
 
         End If

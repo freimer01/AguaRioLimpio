@@ -36,7 +36,7 @@ Public Class PedidoDAL
                         cmdDetalle.Parameters.Clear()
 
                         cmd.Parameters.AddWithValue("@idPedido", pedido.ID)
-                        cmd.Parameters.AddWithValue("@idArticulo", detalle.IdArticulo)
+                        cmd.Parameters.AddWithValue("@idArticulo", detalle.IdProducto)
                         cmd.Parameters.AddWithValue("@cantidad", detalle.Cantidad)
                         cmd.Parameters.AddWithValue("@precio", detalle.Precio)
                         cmd.Parameters.AddWithValue("@subTotal", detalle.SubTotal)
@@ -124,7 +124,7 @@ Public Class PedidoDAL
 
         detalle.ID = reader("ID")
         detalle.IdPedido = reader("idPedido")
-        detalle.IdArticulo = reader("idArticulo")
+        detalle.IdProducto = reader("IdProducto")
         detalle.Cantidad = reader("cantidad")
         detalle.Descuento = reader("descuento")
         detalle.Precio = reader("precio")
